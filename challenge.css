@@ -1,0 +1,197 @@
+/* Challenge CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333333;
+  color: white;
+  padding: 10px 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-weight: 600;
+}
+
+.logo img {
+  border-radius: 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2em;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #dc6b08;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero {
+  position: relative;
+  min-height: 90.3vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  flex-direction: column;
+  z-index: 0;
+  width: 100%;
+  padding: 0px 50px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/chaigym.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3);
+  z-index: -1;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+}
+
+.hero-content p {
+  font-size: 17px;
+}
+
+.cta-button {
+  background-color: #ff7902;
+  padding: 17px 35px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.cta-button:hover {
+  background-color: #be5c07;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Features section styles */
+.features {
+  display: flex;
+  background-color: #000000;
+  width: 100%;
+  height: 15em;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #dc6b08;
+  padding: 10px 30px;
+  width: 20em;
+  border-radius: 25px;
+}
+
+.feature h3 {
+  color: #dc6b08;
+}
+
+.feature p {
+  color: rgb(169, 167, 167);
+}
+
+@media screen and (max-width: 1024px) {
+  .features {
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 20px 20px;
+    height: 100%;
+    margin-top: 50px;
+  }
+  .main {
+    height: 100%;
+  }
+  .navbar .logo img {
+    width: 40px;
+    height: 40px;
+  }
+  .navbar {
+    font-size: 17px;
+    /* justify-content: space-between; */
+    padding: 10px 20px;
+  }
+  .hero {
+    min-height: 100vh;
+    padding: 15px 14px;
+  }
+  .feature {
+    text-align: center;
+  }
+  .hero-content {
+    margin-top: 50px;
+  }
+  .hero-content h1 {
+    font-size: 2em;
+    text-wrap: nowrap;
+  }
+  .hero-content p {
+    text-align: center;
+  }
+  .cta-button {
+    padding: 12px 20px;
+  }
+  .hero::before {
+    background-size: cover; 
+    background-position: center;
+    height: 100%; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 976px) {
+  .hero-content h1 {
+    font-size: 3em;
+    text-wrap: nowrap;
+  }
+}
